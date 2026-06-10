@@ -1,0 +1,60 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: PM Dashboard - Top Navigation Bar]
+Concise bug title: Search bar in PM Dashboard overlaps the profile settings floating window in the top navigation bar
+Tester: RADR-R
+
+[Summary]
+On the Project Manager Dashboard, the search bar located in the upper-right area
+overlaps the profile settings floating window in the top navigation bar. This is a UI
+layout defect causing the two elements to render on top of each other, obstructing
+access to profile settings.
+
+Note: No corresponding test case exists in the TCM repository for this UI defect.
+This report is filed as an unplanned defect discovered during exploratory testing.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- The tester is logged in as a Project Manager.
+- The PM Dashboard is the active view.
+
+[Steps to reproduce]
+1. Log in as a Project Manager.
+2. Navigate to the PM Dashboard.
+3. Observe the top navigation bar at the upper-right corner.
+
+[Actual results]
+The search bar in the upper-right field renders on top of the profile settings
+floating window. The overlap makes one or both elements difficult or impossible to
+interact with cleanly.
+
+[Expected results]
+The profile settings floating window should be on top of the search bar. Both should be fully accessible and visible
+without obstruction.
+
+[Additional information]
+See attached logs, screenshot, and video...
+This defect was discovered during exploratory testing. No test case ID is assigned
+as it was not included in the TCM repository test plan.
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Cosmetic issue / User is inconvenienced (2)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Very High (10)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+None — not in TCM repository. Discovered via exploratory testing on PM Dashboard.
+
+[Impact Sizing (in days)]
+[X] Less than a day
