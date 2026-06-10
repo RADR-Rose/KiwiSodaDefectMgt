@@ -1,0 +1,56 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: Forgot Password]
+Concise bug title: Forgot Password reset link redirects to login page instead of reset form
+Tester: RADR-R
+
+[Summary]
+When a user requests a password reset and clicks the link received via email,
+the application redirects them to the login page instead of the password reset form.
+The reset flow is effectively broken and users cannot recover their accounts.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- A registered user account exists.
+- The user is currently logged out.
+- The user has access to the email inbox tied to the account.
+
+[Steps to reproduce]
+1. Navigate to the login page.
+2. Click "Forgot Password".
+3. Enter a registered email address and submit the forgot password form.
+4. Open the password reset email received in the inbox.
+5. Click the reset link in the email.
+
+[Actual results]
+The application redirects the user to the login page instead of displaying the
+password reset form. No error message is shown. The reset cannot be completed.
+
+[Expected results]
+Clicking the reset link should navigate the user to a password reset form where
+they can enter and confirm a new password.
+
+[Additional information]
+See attached logs, screenshot, and video...
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Data loss / Required function is missing (8)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Moderate (6)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+FPAS-001: Forgot Password Testing
+
+[Impact Sizing (in days)]
+[X] Less than a day
