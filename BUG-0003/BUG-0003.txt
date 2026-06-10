@@ -1,0 +1,56 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: Platform Settings - Office Information]
+Concise bug title: Saving Office Information in Platform Settings logs out the admin session
+Tester: RADR-R
+
+[Summary]
+When an admin attempts to update the Office Information under Platform Settings,
+the application logs the user out instead of saving the changes. The settings are
+not updated and the admin must log back in to continue.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- The tester is logged in as Admin.
+- The Platform Settings page is accessible.
+
+[Steps to reproduce]
+1. Log in as Admin.
+2. Navigate to Platform Settings.
+3. Open the Office Information section.
+4. Modify one or more fields (e.g., office name, address, contact number).
+5. Click Save / Submit.
+
+[Actual results]
+The application logs the admin out immediately upon saving. The changes are not
+applied. The admin is redirected to the login page.
+
+[Expected results]
+The Office Information should be updated and saved successfully. A success
+confirmation message should be displayed. The admin session should remain active.
+
+[Additional information]
+See attached logs, screenshot, and video...
+Note: This may be related to a session token invalidation triggered by the save action.
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Crash or hang cleared by restart / Severe GUI, usability, and accessibility issue (6)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Low, only special types of users (2)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+PLAT-001: Platform Setting Testing - Office Information
+
+[Impact Sizing (in days)]
+[X] Less than a day
