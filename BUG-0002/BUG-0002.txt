@@ -1,0 +1,56 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: Content Moderation]
+Concise bug title: Hidden comment remains visible in post after moderation action
+Tester: RADR-R
+
+[Summary]
+When an admin attempts to hide a comment via the Content Moderation panel,
+the action appears to complete but the comment remains visible to users on the post.
+The hide/moderation function does not take effect on the front-end display.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- The tester is logged in as an Admin.
+- At least one comment exists on a public post.
+
+[Steps to reproduce]
+1. Log in as Admin.
+2. Navigate to the Content Moderation page.
+3. Locate a comment in the moderation list.
+4. Click the "Hide" action for the comment.
+5. Confirm the hide action if prompted.
+6. Navigate to the post where the comment was made and check its visibility.
+
+[Actual results]
+The comment remains visible on the post. The moderation action does not reflect
+on the front-end. Users can still read and interact with the supposedly hidden comment.
+
+[Expected results]
+After hiding a comment via Content Moderation, the comment should no longer be
+visible to regular users on the post. It may still be accessible to admins for review.
+
+[Additional information]
+See attached logs, screenshot, and video...
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Crash or hang cleared by restart / Severe GUI, usability, and accessibility issue (6)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Low, only special types of users (2)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+CMOD-001: Content Moderation Testing - Hide Comment
+
+[Impact Sizing (in days)]
+[X] Less than a day
