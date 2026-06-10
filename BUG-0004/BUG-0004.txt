@@ -1,0 +1,55 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: PM Project Management - Time Filter]
+Concise bug title: Projects Time Filter does not filter results; all projects remain displayed
+Tester: RADR-R
+
+[Summary]
+When a Project Manager applies the Time Filter on the Projects page, the filter
+has no effect and all projects continue to be displayed regardless of the selected
+time range. The filter control appears functional but does not alter the result set.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- The tester is logged in as a Project Manager.
+- Multiple projects exist with different creation/update dates spanning different time ranges.
+
+[Steps to reproduce]
+1. Log in as a Project Manager.
+2. Navigate to the Project Management page.
+3. Locate the Time Filter control.
+4. Select This Month option.
+5. Observe the project list.
+
+[Actual results]
+All projects are still displayed after applying the time filter. Projects outside
+the selected time range are not excluded. The filter does not affect the project list.
+
+[Expected results]
+Only projects that fall within the selected time range should be displayed.
+Projects outside the range should be filtered out of the list.
+
+[Additional information]
+See attached logs, screenshot, and video...
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Cosmetic issue / User is inconvenienced (2)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Moderate (6)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+PMPG-003: Projects Time Filter
+
+[Impact Sizing (in days)]
+[X] Less than a day

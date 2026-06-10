@@ -24,7 +24,7 @@ Network configuration: [X] Wi-Fi
 5. Click Save / Submit.
 
 [Actual results]
-The application logs the admin out immediately upon saving. The changes are not
+The application logs the admin out immediately upon clicking save office. The changes are not
 applied. The admin is redirected to the login page.
 
 [Expected results]
