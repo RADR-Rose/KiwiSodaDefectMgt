@@ -1,0 +1,62 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: PM Dashboard - Dashboard Filtering (Status)]
+Concise bug title: Dashboard status filter (Ongoing / Completed) has no effect on project list
+Tester: RADR-R
+
+[Summary]
+On the PM Dashboard, selecting a status filter (e.g., Ongoing, Completed)
+does not filter the project list. All projects continue to be displayed regardless
+of the status filter option chosen.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- User must be connected to the internet.
+- User must be logged in as Project Manager using the test account
+  (email: 22-1-00856@vsu.edu.ph ; password: 12345678).
+- Multiple projects with different statuses (Ongoing, Completed) must exist.
+
+[Steps to reproduce]
+1. Log in as Project Manager.
+2. Navigate to the PM Dashboard.
+3. Locate the status filter control (Ongoing / Completed).
+4. Select "Ongoing" from the filter options.
+5. Observe the project list.
+6. Repeat by selecting "Completed".
+
+[Actual results]
+All projects remain visible regardless of which status filter is selected.
+The project list does not update or narrow down to match the selected status.
+The filter control appears interactive but produces no change in the displayed results.
+
+[Expected results]
+Selecting a status filter should narrow the project list to only show projects
+matching the selected status:
+- "Ongoing" → only projects currently in progress
+- "Completed" → only fully completed projects
+
+[Additional information]
+See attached logs, screenshot, and video...
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Cosmetic issue / User is inconvenienced (2)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] High (8)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+PMDB-001: Dashboard Filtering - Status
+TCM Link: https://github.com/eking0723/KiwiSodaTCM/blob/main/Project%20Manager%20Testing/PM%20Dashboard%20Overview/PMDB-001_dashboard_filtering_status.md
+
+[Impact Sizing (in days)]
+[X] Less than a day

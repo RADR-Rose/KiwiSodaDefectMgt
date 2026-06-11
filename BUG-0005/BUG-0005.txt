@@ -1,5 +1,5 @@
 KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: PM Dashboard - Top Navigation Bar]
-Concise bug title: Search bar in PM Dashboard overlaps the profile settings floating window in the top navigation bar
+Concise bug title: Search bar in PM Dashboard overlaps the profile settings floating window
 Tester: RADR-R
 
 [Summary]
