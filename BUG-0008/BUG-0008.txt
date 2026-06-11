@@ -1,0 +1,65 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: Project Detail - Documents Tab - Document Pinning]
+Concise bug title: Pinned document status is not retained after page refresh
+Tester: RADR-R
+
+[Summary]
+When a Project Manager pins a document on the Project Detail Documents tab,
+the pin action appears to succeed (success message shown, pin indicator displayed),
+but after refreshing the page, the document reverts to an unpinned state. The
+pinned status is not persisted to the backend.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- User is logged in as Project Manager.
+- A project exists in the system.
+- At least one document has been uploaded to the project's Documents tab.
+
+[Steps to reproduce]
+1. Log in as Project Manager.
+2. Navigate to a project's Documents tab.
+3. Locate a document that is not currently pinned.
+4. Click the Pin button/icon for the selected document.
+5. Verify the success message appears and the pin indicator is shown on the document.
+6. Refresh the page (F5 or browser refresh).
+7. Observe the pinned status of the document.
+
+[Actual results]
+After refreshing the page, the document no longer shows the pin indicator.
+The pinned status is lost and the document appears as unpinned. The pin action
+does not persist across sessions or page reloads.
+
+[Expected results]
+After pinning a document and refreshing the page, the document should remain
+marked as pinned. The pin indicator should persist and the document should
+retain its pinned status as stored in the backend.
+
+[Additional information]
+See attached logs, screenshot, and video...
+Suspected cause: The pin action may only be updating local/client state and not
+making a successful API call to persist the change server-side. Check network
+requests on pin action.
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Data loss / Required function is missing (8)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Moderate (6)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+PJDG-003: Document Pinning
+TCM Link: https://github.com/eking0723/KiwiSodaTCM/blob/main/Project%20Manager%20Testing/Project%20Detail%20-%20Documents%20Tab/PJDG-003_document_pinning.md
+
+[Impact Sizing (in days)]
+[X] Less than a day
