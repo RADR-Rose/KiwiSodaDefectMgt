@@ -25,10 +25,13 @@ a placeholder test case ID of `UI-XXX` or similar is used in place of a TCM ID.
 | `BUG-0003` | PLAT-001 | Saving Office Information in Platform Settings logs out the admin session | OPEN |
 | `BUG-0004` | PMPG-003 | Projects Time Filter does not filter results; all projects remain displayed | OPEN |
 | `BUG-0005` | UI-001 (Exploratory) | Search bar in PM Dashboard overlaps the profile settings button in top nav | OPEN |
+| `BUG-0006` | PMDB-001 | Dashboard status filter (Ongoing / Completed / Draft) has no effect on project list | OPEN |
+| `BUG-0007` | FEED-002 | Feed status tabs (All / Ongoing / Completed) do not filter the project feed | OPEN |
+| `BUG-0008` | PJDG-003 | Pinned document status is not retained after page refresh | OPEN |
 
 ## Test Plan Reference
 
-Bug reports in this repository are based on the KiwiSoda test plan executed on 06/08–06/09/2026 by tester RADR-R.
+Bug reports in this repository are based on the KiwiSoda test plan executed from May-June by tester RADR-R.
 
 ---
 
