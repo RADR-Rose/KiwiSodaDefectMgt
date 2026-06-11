@@ -1,0 +1,64 @@
+KiwiSoda KS.001.00__ InternalTesting Priority1 [Feature: Viewer Feed - Feed Filtering (Status Tabs)]
+Concise bug title: Feed status tabs (All / Ongoing / Completed) do not filter the project feed
+Tester: RADR-R
+
+[Summary]
+On the Viewer Feed / Project Discovery page, clicking the status tabs (All, Ongoing,
+Completed) does not filter the project feed. All projects continue to be shown
+regardless of the tab selected. The URL parameter is not updated and no loader
+or result change is observed.
+
+[Precondition]
+Software version: KS.001.00__
+Software configuration: Standard
+Hardware specifications: Standard test machine
+Network configuration: [X] Wi-Fi
+
+- User is on the landing page or viewer dashboard.
+- Projects with both 'Ongoing' and 'Completed' statuses exist for the selected term.
+
+[Steps to reproduce]
+1. Navigate to the Feed / Project Discovery page as a Viewer.
+2. Locate the status filter tabs (All, Ongoing, Completed) below the Project Dashboard title.
+3. Verify the default state — "All" tab should be selected and all projects shown.
+4. Click the "Ongoing" tab.
+5. Observe the project feed and the browser URL.
+6. Click the "Completed" tab.
+7. Observe the project feed.
+8. Click back to "All".
+
+[Actual results]
+The project feed does not change when switching between tabs. All projects remain
+displayed regardless of the tab selected. The URL does not update with a
+?status= parameter, and no loading indicator appears. The filter has no effect.
+
+[Expected results]
+- "Ongoing" tab → only projects with progress < 100% are shown;
+  URL should update to ?status=ongoing.
+- "Completed" tab → only projects with 100% progress are shown.
+- "All" tab → all projects are shown (ongoing and completed).
+- A brief loading indicator should appear on tab switch.
+
+[Additional information]
+See attached logs, screenshot, and video...
+
+[Is this Breakage?]
+[X] No, new implementation
+
+[Previous code tested] N/A
+
+[Severity: How does this problem impact the customer/user?]
+[X] Cosmetic issue / User is inconvenienced (2)
+
+[Likelihood: How often will a customer/user use this feature/function?]
+[X] Very High (10)
+
+[Repeatability: Is this problem easily reproducible?]
+[X] 100% Reproducible (10)
+
+[Impacted Test Cases]
+FEED-002: Feed Filtering - Status Tabs
+TCM Link: https://github.com/eking0723/KiwiSodaTCM/blob/main/Viewer%20Testing/Project%20Discovery%20-%20Feed/FEED-002_feed_filtering_status_tabs.md
+
+[Impact Sizing (in days)]
+[X] Less than a day
